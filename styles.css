@@ -4,50 +4,93 @@ body{
 }
 
 h1{
+    width: max-content;
+    text-wrap: wrap;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 50px;
-    margin-top: 150px;
-    margin-bottom: 0px;
+    font-size: 90px;
+    margin: 10px auto auto auto;
+    padding: 10px;
   
 }
 
 p{
+    width: max-content;
     text-align: center;
-    margin: 10px;
+    margin: auto auto 20px auto;
+    padding: auto auto 10px auto;
     font-size: 20px;
 }
 
+button{
+    height: 50px;
+    width: auto;
+    font-size: 120%;
+    background-color: orangered;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+
 #color-container{
-    height: 250px;
-    width: 400px;
-    padding-top: 150px;
-    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    flex-flow: center;
+    flex-wrap: wrap;
+    gap: 40px 40px;
+    margin: 30px auto;
+}
+
+.color-square{
+    height: 300px;
+    width: 300px;
+    background-color: #ffffff;
+    margin: auto;
     text-align: center;
     font-size: 30px;
+    border: 2px solid black;
+}
+
+.real-color{
+
+    height: inherit;
+    width: inherit;
 
 }
 
-#rgb-text{
+.rgb-text{
+
+    width: max-content;
     text-align: center;
+    margin: auto auto;
+    padding: 10px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
 }
 
-#color-btn{
-  
-    height: 40px;
-    width: 150px;
-    border: 3px solid black;
-    display: block;
-    margin: 30px auto;
-    font-size: 25px;
-    text-align: center;
 
- 
+
+.input-flex{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    height: auto;
+    width: 30%;
+    margin: 100px auto;
+    background-color: rgba(211, 211, 211, 0.525);
+    border: 5px solid black;
+    border-radius: 7px;
+
+    
 }
 
-.sat-input{
-    text-align: center;
-    font-size: 30px;
+.input-flex-content{
+    margin: 10px auto;
+    font-size: 200%;
 }
+
+
+
+
+
