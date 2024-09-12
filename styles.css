@@ -27,6 +27,7 @@ button{
     width: auto;
     font-size: 120%;
     background-color: orangered;
+    color: black;
     border: 2px solid black;
     border-radius: 5px;
 }
@@ -84,7 +85,7 @@ button{
     border: 5px solid black;
     border-radius: 7px;
     font-weight: bolder;
-    color: black;
+    
     
 }
 
@@ -92,7 +93,7 @@ button{
     max-height: max-content;
     margin: 2% auto;
     font-size: 100%;
-    color: black;
+    
 }
 
 #saturation{
