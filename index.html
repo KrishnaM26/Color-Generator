@@ -2,7 +2,7 @@
 <html lang="en">
 <header>
     <meta charset="UTF-8">
-    <meta name="viewport" contnet="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Color Generator</title>
     <link rel="stylesheet" href="styles.css">
@@ -11,10 +11,31 @@
     <div id="content">
         <h1>Color Generator</h1>
         <p>by Krishna Mehta</p>
-        <div id="color-container"></div>
-        <div id="rgb-text"></div>   
-        <button type="button" id="color-btn">Generate</button>
-        <p class="sat-input">Saturation: <input type="range" min="0" max="100" value="100" class="sat-input" id="saturation"></p>
+        <div id="color-container">
+
+            <div class="color-square" id="color-div-1">
+                <div class="real-color" id="color-1"></div>
+                <div class="rgb-text" id="rgb-text-1">rgb( 255, 255, 255, 1 )</div>
+            </div>
+
+            
+      
+        </div>
+        
+        <div class="input-flex" id="inputs">
+            <div class="input-flex-content"><button type="button"  id="color-btn">Generate</button></div>
+            <div class="input-flex-content">Saturation: <input type="range" min="0" max="100" value="100"  id="saturation"></div> 
+            <div class="input-flex-content"> Background: <input type="color" value="#FFFFFF" id="background-color"></div>
+            <div class="input-flex-content">
+                <button type="button" id="remove-color">Remove Color</button>
+                <button type="button" id="add-color">Add Color</button> 
+                <span id="color-count"></span>
+            </div>
+               
+           
+           
+            
+        </div>
     </div>
  <script src="script.js" ></script>
 </body>
