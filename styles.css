@@ -8,18 +8,18 @@ h1{
     text-wrap: wrap;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 90px;
-    margin: 10px auto auto auto;
-    padding: 10px;
+    font-size: 500%;
+    margin: 5px auto auto auto;
+
   
 }
 
 p{
     width: max-content;
     text-align: center;
-    margin: auto auto 20px auto;
+    margin: 0px auto 20px auto;
     padding: auto auto 10px auto;
-    font-size: 20px;
+    font-size: 100%;
 }
 
 button{
@@ -76,9 +76,10 @@ button{
     flex-direction: column;
     justify-content:center;
     height: auto;
-    width: 30%;
+    width: max-content;
     margin: 100px auto;
-    background-color: rgba(211, 211, 211, 0.525);
+    padding: 10px;
+    background-color: rgba(211, 211, 211, 0.68);
     border: 5px solid black;
     border-radius: 7px;
 
@@ -87,7 +88,7 @@ button{
 
 .input-flex-content{
     margin: 10px auto;
-    font-size: 200%;
+    font-size: 150%;
 }
 
 

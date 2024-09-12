@@ -129,7 +129,7 @@ const darkMode = (hex) => {
     const split = hex.split("");
     
     for(let i = 1; i < split.length-1; i += 2){
-        if(split[i] <= '5'){
+        if(split[i] <= '6'){
             rgbColor = 'white';
            
         }else{
