@@ -8,8 +8,8 @@ h1{
     text-wrap: wrap;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 500%;
-    margin: 5px auto auto auto;
+    font-size: 450%;
+    margin: 1% auto auto auto;
 
   
 }
@@ -17,8 +17,8 @@ h1{
 p{
     width: max-content;
     text-align: center;
-    margin: 0px auto 20px auto;
-    padding: auto auto 10px auto;
+    margin: 0px auto 2px auto;
+    padding: auto;
     font-size: 100%;
 }
 
@@ -37,13 +37,13 @@ button{
     flex-direction: row;
     flex-flow: center;
     flex-wrap: wrap;
-    gap: 40px 40px;
-    margin: 30px auto;
+    gap: 50px 50px;
+    margin: 4%  auto 50px  auto;
 }
 
 .color-square{
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    min-width: 250px;
     background-color: #ffffff;
     margin: auto;
     text-align: center;
@@ -75,21 +75,31 @@ button{
     display: flex;
     flex-direction: column;
     justify-content:center;
+    flex-wrap: wrap;
     height: auto;
-    width: max-content;
-    margin: 100px auto;
+    max-width: max-content;
+    margin: 5% auto;
     padding: 10px;
     background-color: rgba(211, 211, 211, 0.68);
     border: 5px solid black;
     border-radius: 7px;
-
+    font-weight: bolder;
+    color: black;
     
 }
 
 .input-flex-content{
-    margin: 10px auto;
-    font-size: 150%;
+    max-height: max-content;
+    margin: 2% auto;
+    font-size: 100%;
+    color: black;
 }
+
+#saturation{
+    max-width: 90%;
+    height: 200%;
+}
+
 
 
 

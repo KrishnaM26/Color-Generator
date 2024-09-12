@@ -23,7 +23,6 @@ const colors =
     
 ];
 
-
 //generates random numbers for rgb
 const randomNumber = () =>  {
     return Math.floor(Math.random() * (225-0));
@@ -46,9 +45,7 @@ const addColor = () => {
             g: 255,
             b: 255,
         };
-        
         colors.push(newObj);
-                
 
         //create elements
         const newDivContainer = document.createElement("div");
@@ -69,9 +66,7 @@ const addColor = () => {
         newDivContainer.appendChild(newDivRgb);
 
         container.appendChild(newDivContainer);
-
     }
-
 }
 
 
@@ -104,7 +99,6 @@ const getRGB = document.getElementById(`rgb-text-${count}`);
 
 }
 
-
 saturation.oninput = function () {
     const getColor = document.getElementById(`color-${count}`);
     const getRGB = document.getElementById(`rgb-text-${count}`); 
@@ -117,19 +111,20 @@ saturation.oninput = function () {
  
     
 } 
+
 //Background Color
 bcgColor = background.value;
-
 background.oninput = function () {
     bcgColor = this.value;
     document.body.style.backgroundColor = `${bcgColor}`;
     darkMode(bcgColor);
 }
+//Changes text color based on input color
 const darkMode = (hex) => {
     const split = hex.split("");
     
     for(let i = 1; i < split.length-1; i += 2){
-        if(split[i] <= '6'){
+        if(split[i] < '6'){
             rgbColor = 'white';
            
         }else{
