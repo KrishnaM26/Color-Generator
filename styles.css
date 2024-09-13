@@ -8,7 +8,7 @@ h1{
     text-wrap: wrap;
     text-align: center;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 450%;
+    font-size: 350%;
     margin: 1% auto auto auto;
 
   
@@ -28,8 +28,10 @@ button{
     font-size: 120%;
     background-color: orangered;
     color: black;
-    border: 2px solid black;
+    border: 0px;
+   border: 2px solid black;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -50,6 +52,7 @@ button{
     text-align: center;
     font-size: 30px;
     border: 2px solid black;
+    cursor:pointer;
 }
 
 .real-color{
@@ -82,7 +85,7 @@ button{
     margin: 5% auto;
     padding: 10px;
     background-color: rgba(211, 211, 211, 0.68);
-    border: 5px solid black;
+    border: 3px solid black;
     border-radius: 7px;
     font-weight: bolder;
     
@@ -93,12 +96,26 @@ button{
     max-height: max-content;
     margin: 2% auto;
     font-size: 100%;
+  
     
 }
 
 #saturation{
     max-width: 90%;
     height: 200%;
+    cursor: pointer;
+}
+
+#background-color{
+    cursor: pointer;
+}
+
+#reset{
+    background-color: green;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+    
 }
 
 

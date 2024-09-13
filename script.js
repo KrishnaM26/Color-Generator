@@ -6,8 +6,18 @@ const generateBtn = document.getElementById('color-btn');
 const addColorBtn = document.getElementById('add-color');
 const removeColorBtn = document.getElementById('remove-color');
 const colorCount = document.getElementById('color-count');
+const resetBtn = document.getElementById('reset');
+let  selectedColor = container.addEventListener("click", (e) => {
+    
+    const selectedId = e.target.id;
+    const regex = /(color-[1-5])/gi;
+    const regexRemove = /(color-)/gi;
+    selectedColor = regex.test(selectedId) ? selectedId.replace(regexRemove,"") : console.log(false);
+
+});
 
 let count = 1;
+selectedColor = count;
 let bcgColor = '#FFFFFF';
 let rgbColor = 'black';
 let sat = saturation.value / 100;
@@ -31,13 +41,13 @@ const randomNumber = () =>  {
 
 colorCount.innerText = `${count} / 5`;
 const addColor = () => {
-
+  
     if(count < 5){
-
+   
         //increase counter
         count++;
         colorCount.innerText = `${count} / 5`;
-
+        selectedColor = count;
         //add object
         let newObj = {
             c: `${count}`,
@@ -67,6 +77,7 @@ const addColor = () => {
 
         container.appendChild(newDivContainer);
     }
+   
 }
 
 
@@ -79,14 +90,22 @@ const removeColor = () => {
        count--;
        colorCount.innerText = `${count} / 5`;
 
-       colors.pop();
+      
+
+
+       const removed = colors.pop();
+      console.log(removed);
+        if(selectedColor == removed.c){
+            selectedColor = count;
+        }
+
     }
 }
 
 
 const changeColor = () => {
-const getColor = document.getElementById(`color-${count}`);
-const getRGB = document.getElementById(`rgb-text-${count}`);
+const getColor = document.getElementById(`color-${selectedColor}`);
+const getRGB = document.getElementById(`rgb-text-${selectedColor}`);
 
         for(let i = 0; i < colors.length; i++){
         colors[i].r = randomNumber();
@@ -102,8 +121,8 @@ const getRGB = document.getElementById(`rgb-text-${count}`);
 saturation.oninput = function () {
     const getColor = document.getElementById(`color-${count}`);
     const getRGB = document.getElementById(`rgb-text-${count}`); 
-
     sat = this.value / 100;
+    
     for(let i = 0; i < colors.length; i++){ 
     getColor.style.backgroundColor = `rgb(${colors[i].r},${colors[i].g},${colors[i].b}, ${sat} )`;
     getRGB.innerText = `rgb( ${colors[i].r}, ${colors[i].g}, ${colors[i].b}, ${sat} )`;
@@ -140,13 +159,48 @@ const darkMode = (hex) => {
 
 }
 
+//resets all values to their original state
+const reset = () => {
+    
+  
+    console.log(";)");
+    rgbColor = 'black';
+    bcgColor = '#FFFFFF';
+    sat = 1;
+    colors[0] = { 
+        c: '1',
+        r:255,
+        g:255,
+        b:255
+    };
 
     
+    while(count > 1){
+        colors.pop()
+        document.getElementById(`color-div-${count}`).remove();
+        count --;
+    }
+
+    document.body.style.backgroundColor = bcgColor;
+    background.value = bcgColor;
+    document.querySelector("h1").style.color = rgbColor;
+    document.querySelector("p").style.color = rgbColor;
+    document.getElementById('color-1').style.backgroundColor = `rgb(${colors[0].r},${colors[0].g},${colors[0].b}, ${sat} )`;
+    document.getElementById('rgb-text-1').innerText = `rgb( ${colors[0].r}, ${colors[0].g}, ${colors[0].b}, ${sat} )`;
+    document.getElementById('rgb-text-1').style.color = `${rgbColor}`;
+    saturation.value = 100;
+    colorCount.innerText = '1 / 5';
+}
+   
+
+
+
+
 
 generateBtn.addEventListener("click", changeColor);
 addColorBtn.addEventListener("click", addColor);
 removeColorBtn.addEventListener("click", removeColor);
-
+resetBtn.addEventListener("click", reset);
 
 
 
