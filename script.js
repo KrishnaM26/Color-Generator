@@ -12,7 +12,7 @@ let  selectedColor = container.addEventListener("click", (e) => {
     const selectedId = e.target.id;
     const regex = /(color-[1-5])/gi;
     const regexRemove = /(color-)/gi;
-    selectedColor = regex.test(selectedId) ? selectedId.replace(regexRemove,"") : console.log(false);
+    selectedColor = regex.test(selectedId) ? selectedId.replace(regexRemove,"") : alert("Click the square you want to select");
 
 });
 
