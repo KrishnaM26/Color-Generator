@@ -119,8 +119,8 @@ const getRGB = document.getElementById(`rgb-text-${selectedColor}`);
 }
 
 saturation.oninput = function () {
-    const getColor = document.getElementById(`color-${count}`);
-    const getRGB = document.getElementById(`rgb-text-${count}`); 
+    const getColor = document.getElementById(`color-${selectedColor}`);
+    const getRGB = document.getElementById(`rgb-text-${selectedColor}`); 
     sat = this.value / 100;
     
     for(let i = 0; i < colors.length; i++){ 
