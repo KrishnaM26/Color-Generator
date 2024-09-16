@@ -28,7 +28,6 @@ button{
     font-size: 120%;
     background-color: orangered;
     color: black;
-    border: 0px;
    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
@@ -102,7 +101,7 @@ button{
 
 #saturation{
     max-width: 90%;
-    height: 200%;
+    max-height: 200%;
     cursor: pointer;
 }
 
